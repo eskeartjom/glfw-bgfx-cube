@@ -7,6 +7,8 @@ cd ./Premake
 cp premake5macos ../premake5
 
 cd ..
+
+sudo chmod +x premake5
 ./premake5 xcode4
 
 rm -f premake5

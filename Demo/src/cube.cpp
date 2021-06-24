@@ -146,6 +146,16 @@ namespace ea {
 
 		}
 #elif PLATFORM_MACOS
+        switch (bgfx::getRendererType())
+        {
+        case bgfx::RendererType::Direct3D9: ss << "../../../Demo/src/shaders/dx9/"; break;
+        case bgfx::RendererType::Direct3D11:
+        case bgfx::RendererType::Direct3D12: ss << "../../../Demo/src/shaders/dx11/"; break;
+        case bgfx::RendererType::Metal: ss << "../../../Demo/src/shaders/metal/"; break;
+        case bgfx::RendererType::OpenGL: ss << "../../../Demo/src/shaders/glsl/"; break;
+        case bgfx::RendererType::Vulkan: ss << "../../../Demo/src/shaders/spirv/"; break;
+
+        }
 #endif
 
 		ss << filename;

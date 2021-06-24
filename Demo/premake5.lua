@@ -11,8 +11,8 @@ project "Demo"
 
     files
     {
-        "Source/**.h",
-        "Source/**.cpp"
+        "src/**.h",
+        "src/**.cpp"
     }
 
 	defines
@@ -50,7 +50,7 @@ project "Demo"
 			"%{IncludeDir.bgfx}",
 			"%{IncludeDir.bx}",
 			"%{IncludeDir.bimg}",
-			"%{IncludeDir.bx}/compat/msvc",
+			"%{IncludeDir.bx}/compat/osx",
 		}
 
 		links
@@ -69,8 +69,7 @@ project "Demo"
 			"%{IncludeDir.glfw}",
 			"%{IncludeDir.bgfx}",
 			"%{IncludeDir.bx}",
-			"%{IncludeDir.bimg}",
-			"%{IncludeDir.bx}/compat/msvc",
+			"%{IncludeDir.bimg}"
 		}
 
 		links
