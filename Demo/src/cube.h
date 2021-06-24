@@ -59,6 +59,9 @@ namespace ea {
 		bgfx::IndexBufferHandle indexBuffer;
 		bgfx::ProgramHandle program;
 
+		bgfx::RendererType::Enum renderAPI;
+		const char* renderAPIName;
+
 		uint64_t counter = 0;
 
 		

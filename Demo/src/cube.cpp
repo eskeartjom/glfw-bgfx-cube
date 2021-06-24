@@ -77,10 +77,15 @@ namespace ea {
 		program = bgfx::createProgram(vs, fs, true);
 		bgfx::setDebug(BGFX_DEBUG_TEXT);
 
+		renderAPI = bgfx::getRendererType();
+		renderAPIName = bgfx::getRendererName(renderAPI);
+
 	}
 
 	void Cube::Run()
 	{
+		
+
 		while (isRunning) {
 
 			glfwPollEvents();
@@ -107,7 +112,8 @@ namespace ea {
 
 			bgfx::dbgTextClear();
 
-			bgfx::dbgTextPrintf(0, 0, 0x0f, "Press SPACE to to quit.");
+			bgfx::dbgTextPrintf(0, 0, 0x0f, "Using: \"%s\" %s", renderAPIName, "API.");
+			bgfx::dbgTextPrintf(0, 1, 0x0f, "Press SPACE to to quit.");
 
 			bgfx::frame();
 			counter++;
@@ -116,7 +122,10 @@ namespace ea {
 
 	void Cube::Destroy()
 	{
+		bgfx::destroy(vertexBuffer);
+		bgfx::destroy(program);
 		bgfx::shutdown();
+		
 		glfwDestroyWindow(window);
 		glfwTerminate();
 	}
