@@ -1,0 +1,15 @@
+bin/
+obj/
+
+*.log
+
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+
+.DS_Store
+**.xcworkspace/
+**.xcodeproj/
+

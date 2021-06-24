@@ -1,0 +1,12 @@
+[submodule "Demo/Dependencies/glfw"]
+	path = Demo/Dependencies/glfw
+	url = https://github.com/eskeartjom/glfw
+[submodule "Demo/Dependencies/bgfx"]
+	path = Demo/Dependencies/bgfx
+	url = https://github.com/eskeartjom/bgfx
+[submodule "Demo/Dependencies/bx"]
+	path = Demo/Dependencies/bx
+	url = https://github.com/eskeartjom/bx
+[submodule "Demo/Dependencies/bimg"]
+	path = Demo/Dependencies/bimg
+	url = https://github.com/eskeartjom/bimg
